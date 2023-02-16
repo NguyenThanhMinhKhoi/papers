@@ -1,0 +1,25 @@
+
+
+<div class="nav">
+
+        <span class="Title">Báo mới</span>
+        
+        
+        <!-- <h3 {{thi}}></h3> -->
+        <!-- <img src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=" alt=""> -->
+        <span class="example-spacer"></span>
+        <!-- <div class="list">
+          <h1>San pham</h1>
+          <h1>About us</h1>
+          <h1>Blogs</h1>
+          <h1>Lien he</h1>
+          <h1>Tuyen dung</h1>
+        </div> -->
+        
+        <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+ 
+        </button> -->
+        <img *ngIf="authService.currentUser" [src] = "authService.currentUser.photoURL" style="height:50px;width: 50px;border-radius: 30px;margin-bottom: 20px;margin-left: 50px;"/>
+        <p class="display" *ngIf="authService.currentUser" >{{authService.currentUser.displayName}}</p>
+  </div>
+ 

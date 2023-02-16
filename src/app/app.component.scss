@@ -1,0 +1,46 @@
+// .container {
+//   display: grid;
+//     grid-gap: 1rem;
+//     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+
+//   }
+.container{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  min-height: 250px;
+}
+  .example-card{
+    width:  fit-content ;
+    height: 650px;
+    border: 3px solid;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  // .container {
+  //   display: grid;
+  //   grid-template: auto 1fr auto / auto 1fr auto;
+  // }
+  
+  .title {
+    padding: 2rem;
+    grid-column: 1 / 4;
+  }
+
+  .description {
+    grid-column: 1 / 2;
+  }
+
+  .content {
+    grid-column: 2 / 3;
+  }
+
+  .author{
+    grid-column: 3 / 4;
+  }
+
+  .publishedAt {
+    grid-column: 1 / 4;
+  }

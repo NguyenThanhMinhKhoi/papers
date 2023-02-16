@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div  *ngFor="let news of (news$|async)?.articles??[]" class=>
+  <mat-card class="example-card">
+  
+      <header class="title">{{news.title}}</header>
+      <!-- <img  src="https://www.01net.com/app/uploads/2023/01/MicrosoftTeams-image-1.jpg" style="width: 500px;" alt=""> -->
+      <div class="description" contenteditable>{{news.description}}</div>
+      <main class="content" contenteditable> {{news.content}}</main>
+      <div class="author" contenteditable>{{news.author}}</div>
+      <footer class="publishedAt">{{news.publishedAt}}</footer>
+  </mat-card>
+    </div>
+</div>
+      <!-- <mat-card-header>
+       
+      
+        <mat-card-title class="title">Tựa:{{news.title}}</mat-card-title>
+        <p>
+          Tóm Tắt:
+          {{news.description}}
+        </p>
+        <mat-card-content width=device-width, initial-scale=1>Nội dung chính:
+          {{news.content}}
+     </mat-card-content>
+
+        <mat-card-subtitle class="subtitle">{{news.content}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://www.01net.com/app/uploads/2023/01/MicrosoftTeams-image-1.jpg" alt="Photo of a Shiba Inu">
+      <h3>Tác giả:{{news.author}}</h3>
+    
+    </mat-card> 
+
+  
+<h4>{{news.publishedAt}}</h4>
+  
+  
+  <!-- </div> -->
+  <!-- </div> -->
+
+  <router-outlet></router-outlet>
